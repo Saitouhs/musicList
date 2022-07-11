@@ -71,11 +71,6 @@ public class Music {
 
 	@Override
 	public String toString() {
-		return  "<tr>"+
-				"<td>"+m_name+"</td>"+
-				"<td>"+s_name+"</td>"+
-				"<td>"+a_name+"</td>"+
-				"<td>"+m_time+"</td>"+
-				"<td>"+m_style+"</td>" ;
+		return "{\"m_id\":\""+this.id+"\",\"m_name\":\""+this.m_name+"\"}";
 	}
 }

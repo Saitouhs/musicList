@@ -41,9 +41,6 @@ public class List_info {
 
 	@Override
 	public String toString() {
-		return "<tr>"+
-				"<td>"+l_id+"</td>"+
-				"<td>"+list_name+"</td>"+
-				"<td>"+list_date+"</td>";
+		return "{\"l_id\":\""+this.l_id+"\",\"l_name\":\""+this.list_name+"\"}";
 	}
 }

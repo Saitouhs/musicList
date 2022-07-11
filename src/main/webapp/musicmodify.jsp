@@ -49,15 +49,19 @@
 <body>
 
 <zrl id="zrl" style="color: red;"></zrl>
-<form id="form" action="musicact" onsubmit="">
-    <input type="hidden" name="opr" id="opr" value="insert">
+<form id="form" action="musicact" onsubmit="" method="post">
+    <input type="hidden" name="opr" id="opr" value="update">
+    <input type="hidden" name="m_id" id="m_id"   value="<%=request.getParameter("m_id")==null?"":request.getParameter("m_id")%>">
     曲名:
-    <input type="text" name="m_name" id="m_name" placeholder="曲名"><br>
+    <input type="text" name="m_name" id="m_name"  value="<%=request.getParameter("m_name")==null?"":request.getParameter("m_name")%>"><br>
     歌手:
-    <input type="text" name="s_name" id="s_name" placeholder="歌手"><br>
+    <input type="text" name="s_name" id="s_name"  value="<%=request.getParameter("s_name")==null?"":request.getParameter("s_name")%>"><br>
     专辑:
-    <input type="text" name="a_name" id="a_name" placeholder="专辑"> <br>
-    <input type="submit" value="添加">
+    <input type="text" name="a_name" id="a_name" value="<%=request.getParameter("a_name")==null?"":request.getParameter("a_name")%>"> <br>
+    风格:
+    <input type="text" name="m_style" id="m_style"  value="<%=request.getParameter("m_style")==null?"":request.getParameter("m_style")%>">
+    <br>
+    <input type="submit" value="修改">
 </form>
 </body>
 </html>

@@ -72,7 +72,8 @@
 
 <body>
 
-<form onsubmit="namecheck(this)" action="listinsert.jsp?">
+<form onsubmit="namecheck(this)" action="listact">
+    <input type="hidden"id="opr" name="opr" value="insert">
     歌单名
     <input type="text" id="l_name" name="l_name"><span  id="lname" style="color: red"></span><br>
     创建用户

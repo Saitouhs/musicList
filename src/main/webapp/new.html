@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<h1 id="text">0
+</h1>
+
+
+<button onclick="change()"> button </button>
+</body>
+<script>
+
+    let i = 0;
+    let flag;
+    var tes = document.getElementById("text");
+
+    var fall = setInterval("changePic()", 10);
+
+    function change()
+    {
+      if(flag>0)
+      {
+        fall = setInterval("changePic()", 10);
+        flag = 0;
+      }
+      else{
+        clearInterval(fall);
+        flag = 1;
+      }
+    }
+
+    function changePic() {
+        i++;
+        if (i >= 10)
+            i = 0;
+        tes.innerHTML = i;
+    }
+</script>
+</html>
